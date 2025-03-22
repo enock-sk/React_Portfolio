@@ -3,7 +3,6 @@ import './portfolio.css'
 import IMG1 from '../../assets/portfolio.jpg'
 import IMG2 from '../../assets/portfolio_1.jpg'
 import IMG3 from '../../assets/portfolio_2.jpg'
-import IMG4 from '../../assets/portfolio_3.jpg'
 import IMG5 from '../../assets/portfolio_4.jpg'
 import IMG6 from '../../assets/portfolio_5.jpg'
 const data=[
@@ -30,7 +29,7 @@ const data=[
   },
   {
     id:4,
-    image:IMG4,
+    image:IMG6,
     title: 'My Portfolio Website',
     github: 'https://github.com/enock-sk',
     demo: 'enokoo.netlify.app'
@@ -44,7 +43,7 @@ const data=[
   },
   {
     id:6,
-    image:IMG6,
+    image:IMG5,
     title: 'Student Springboot REST API',
     github: 'https://github.com',
     demo: 'http'
