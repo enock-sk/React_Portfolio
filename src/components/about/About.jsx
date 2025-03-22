@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/linkedin_profile.jpg'
+import ME from '../../assets/linkedin_profile.png'
 import { LiaBuromobelexperte } from "react-icons/lia";
 import { MdFolderZip } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
