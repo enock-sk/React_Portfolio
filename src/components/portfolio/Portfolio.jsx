@@ -10,36 +10,36 @@ const data=[
   {
     id:1,
     image:IMG1,
-    title: 'Android Application For Doctor Appointment Online',
-    github: 'https://github.com',
-    demo: 'http'
+    title: 'JobSpark TypeScript/React',
+    github: 'https://github.com/enock-sk',
+    demo: 'https://jobspark-lovat.vercel.app/'
   },
   {
     id:2,
     image:IMG2,
-    title: 'My Favourite Movie Website in React',
-    github: 'https://github.com',
-    demo: 'http'
+    title: 'My Favourite Movie Website in React-Allow Users to Fetch their Favourite Movies',
+    github: 'https://github.com/enock-sk',
+    demo: 'https://favmovie-psi.vercel.app/'
   },
   {
     id:3,
     image:IMG3,
-    title: 'News App',
-    github: 'https://github.com',
-    demo: 'http'
+    title: 'JobSpark Django REST API/ Backend',
+    github: 'https://github.com/enock-sk',
+    demo: 'https://jobspark-backend.onrender.com/api/jobs/'
   },
   {
     id:4,
     image:IMG4,
-    title: 'Donnut Landing Page',
-    github: 'https://github.com',
-    demo: 'http'
+    title: 'My Portfolio Website',
+    github: 'https://github.com/enock-sk',
+    demo: 'enokoo.netlify.app'
   },
   {
     id:5,
     image:IMG5,
     title: 'Shoe Ecommerce Mobile APP in Flutter',
-    github: 'https://github.com',
+    github: 'https://github.com/enock-sk',
     demo: 'http'
   },
   {
