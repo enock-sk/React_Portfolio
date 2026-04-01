@@ -46,6 +46,17 @@ input, textarea{
     resize: none;
     color: var(--color-white);
 }
+.success-msg {
+  color: #4caf50;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.error-msg {
+  color: #f44336;
+  margin-top: 1rem;
+  font-weight: 500;
+}
 @media screen and (max-width: 1024px) {
  .container.contact__container{
     grid-template-columns: 1fr;

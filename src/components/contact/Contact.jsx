@@ -7,30 +7,32 @@ import emailjs from 'emailjs-com'
 const Contact = () => {
   const form = useRef()
   const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState('') // success | error | ''
 
   const sendEmail = (e) => {
     e.preventDefault()
     setLoading(true)
+    setStatus('')
 
     emailjs
       .sendForm(
-        'service_822xp02',        // replace with your service ID
-        'template_ccyxud9',       // replace with your template ID
+        'service_822xp02',
+        'template_ccyxud9',
         form.current,
-        '_rybnnDyI3izMWfqV'         // 🔥 replace this
+        '_rybnnDyI3izMWfqV'
       )
       .then(
         () => {
-          alert('Thankyou! Message sent successfully! WE WILL GET BACK TO YOU SOON.')
+          setStatus('success')
           setLoading(false)
+          e.target.reset()
         },
         (error) => {
-          alert('Failed to send message: ' + error.text)
+          console.log(error.text)
+          setStatus('error')
           setLoading(false)
         }
       )
-
-    e.target.reset()
   }
 
   return (
@@ -67,32 +69,23 @@ const Contact = () => {
 
         </div>
 
-        {/* CONTACT FORM */}
+        {/* FORM */}
         <form ref={form} onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
-
-          <textarea
-            name="message"
-            rows="7"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <input type="text" name="name" placeholder="Your Full Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
 
           <button type="submit" className="btn btn-primary" disabled={loading}>
             {loading ? 'Sending...' : 'Send'}
           </button>
+
+          {/* ✅ STATUS MESSAGE */}
+          {status === 'success' && (
+            <p className="success-msg">✅ Message sent successfully!</p>
+          )}
+          {status === 'error' && (
+            <p className="error-msg">❌ Failed to send message. Try again.</p>
+          )}
         </form>
       </div>
     </section>
