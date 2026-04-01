@@ -38,14 +38,14 @@ const data = [
   },
   {
     id: 5,
-    image: IMG5,
+    image: IMG7,
     title: 'EnoSoftwares Frontend- Startup project',
     github: 'https://github.com/enock-sk',
-    demo: 'https://enobutcheries.vercel.app/' // temporary placeholder
+    demo: 'https://enosoftwares.netlify.app/' // temporary placeholder
   },
   {
     id: 6,
-    image: IMG7,
+    image: IMG5,
     title: 'EnoButcheries',
     github: 'https://enobutcheries.vercel.app/',
     demo: 'https://enobutcheries.vercel.app/' // temporary placeholder
