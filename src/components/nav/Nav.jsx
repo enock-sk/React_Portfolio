@@ -28,64 +28,62 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll handler
-  const scrollToSection = (id) => {
-    const target = document.querySelector(id);
-    target?.scrollIntoView({ behavior: "smooth" });
-    setActiveNav(id);
-  };
-
   return (
     <nav role="navigation">
-      {/* Home button */}
-      <button
-        onClick={() => scrollToSection("#top")}
+      {/* Only minimal href fix for Home */}
+      <a
+        href="#top"
+        onClick={() => setActiveNav("#home")}
         className={activeNav === "#home" ? "active" : ""}
         aria-label="Home"
       >
         <FaHome />
-      </button>
+      </a>
 
-      {/* Internal section buttons */}
-      <button
-        onClick={() => scrollToSection("#about")}
+      <a
+        href="#about"
+        onClick={() => setActiveNav("#about")}
         className={activeNav === "#about" ? "active" : ""}
         aria-label="About"
       >
         <CgProfile />
-      </button>
+      </a>
 
-      <button
-        onClick={() => scrollToSection("#experience")}
+      <a
+        href="#experience"
+        onClick={() => setActiveNav("#experience")}
         className={activeNav === "#experience" ? "active" : ""}
         aria-label="Experience"
       >
         <SiKnowledgebase />
-      </button>
+      </a>
 
-      <button
-        onClick={() => scrollToSection("#services")}
+      <a
+        href="#services"
+        onClick={() => setActiveNav("#services")}
         className={activeNav === "#services" ? "active" : ""}
         aria-label="Services"
       >
         <GrServices />
-      </button>
+      </a>
 
-      <button
-        onClick={() => scrollToSection("#portfolio")}
+      <a
+        href="#portfolio"
+        onClick={() => setActiveNav("#portfolio")}
         className={activeNav === "#portfolio" ? "active" : ""}
         aria-label="Portfolio"
       >
         <FaTools />
-      </button>
+      </a>
 
-      <button
-        onClick={() => scrollToSection("#contact")}
+      <a
+        href="#contact"
+        onClick={() => setActiveNav("#contact")}
         className={activeNav === "#contact" ? "active" : ""}
         aria-label="Contact"
       >
         <MdContactPhone />
-      </button>
+      </a>
     </nav>
   );
 };
