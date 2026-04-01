@@ -57,7 +57,7 @@ const Contact = () => {
           <article className='contact__option'>
             <RiMessengerLine className="contact__option-icon"/>
             <h4>WhatsApp</h4>
-            <h5>+254724860844</h5>
+            <h5>+254724299505</h5>
             <a
               href="https://api.whatsapp.com/send?phone=254724299505"
               target="_blank"
@@ -79,12 +79,12 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send'}
           </button>
 
-          {/* ✅ STATUS MESSAGE */}
+          {/* STATUS MESSAGE */}
           {status === 'success' && (
-            <p className="success-msg">✅ Message sent successfully!</p>
+            <p className="success-msg">Message sent successfully! WE WILL GET BACK YTO YOU SOON</p>
           )}
           {status === 'error' && (
-            <p className="error-msg">❌ Failed to send message. Try again.</p>
+            <p className="error-msg">Failed to send message. Try again later.</p>
           )}
         </form>
       </div>
