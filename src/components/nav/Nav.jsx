@@ -7,75 +7,85 @@ import { GrServices } from "react-icons/gr";
 import { MdContactPhone } from "react-icons/md";
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState("#");
+  const [activeNav, setActiveNav] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["#about", "#experience", "#services", "#portfolio", "#contact"];
       const scrollPosition = window.scrollY + 100;
 
+      let currentActive = "#home";
       for (const section of sections) {
         const sectionElement = document.querySelector(section);
         if (sectionElement && sectionElement.offsetTop <= scrollPosition) {
-          setActiveNav(section);
+          currentActive = section;
         }
       }
+      setActiveNav(currentActive);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Smooth scroll handler
+  const scrollToSection = (id) => {
+    const target = document.querySelector(id);
+    target?.scrollIntoView({ behavior: "smooth" });
+    setActiveNav(id);
+  };
+
   return (
     <nav role="navigation">
-      <a
-        href="#"
-        onClick={() => setActiveNav("#")}
-        className={activeNav === "#" ? "active" : ""}
+      {/* Home button */}
+      <button
+        onClick={() => scrollToSection("#top")}
+        className={activeNav === "#home" ? "active" : ""}
         aria-label="Home"
       >
         <FaHome />
-      </a>
-      <a
-        href="#about"
-        onClick={() => setActiveNav("#about")}
+      </button>
+
+      {/* Internal section buttons */}
+      <button
+        onClick={() => scrollToSection("#about")}
         className={activeNav === "#about" ? "active" : ""}
         aria-label="About"
       >
         <CgProfile />
-      </a>
-      <a
-        href="#experience"
-        onClick={() => setActiveNav("#experience")}
+      </button>
+
+      <button
+        onClick={() => scrollToSection("#experience")}
         className={activeNav === "#experience" ? "active" : ""}
         aria-label="Experience"
       >
         <SiKnowledgebase />
-      </a>
-      <a
-        href="#services"
-        onClick={() => setActiveNav("#services")}
+      </button>
+
+      <button
+        onClick={() => scrollToSection("#services")}
         className={activeNav === "#services" ? "active" : ""}
         aria-label="Services"
       >
         <GrServices />
-      </a>
-      <a
-        href="#portfolio"
-        onClick={() => setActiveNav("#portfolio")}
+      </button>
+
+      <button
+        onClick={() => scrollToSection("#portfolio")}
         className={activeNav === "#portfolio" ? "active" : ""}
         aria-label="Portfolio"
       >
         <FaTools />
-      </a>
-      <a
-        href="#contact"
-        onClick={() => setActiveNav("#contact")}
+      </button>
+
+      <button
+        onClick={() => scrollToSection("#contact")}
         className={activeNav === "#contact" ? "active" : ""}
         aria-label="Contact"
       >
         <MdContactPhone />
-      </a>
+      </button>
     </nav>
   );
 };
