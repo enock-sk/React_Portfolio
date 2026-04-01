@@ -3,46 +3,20 @@ import './footer.css';
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
-  // Smooth scroll handler for internal links
-  const handleScroll = (e, targetId) => {
-    e.preventDefault();
-    const target = document.querySelector(targetId);
-    target?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <footer>
-      {/* Logo as a button for accessibility */}
-      <button 
-        className='footer__logo' 
-        onClick={(e) => handleScroll(e, '#top')}
-        aria-label="Scroll to top"
-      >
-        Eno_Africa
-      </button>
+      {/* Provide a valid href for the logo */}
+      <a href="#top" className='footer__logo'>Eno_Africa</a>
 
       <ul className='permalinks'>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#top')}>Home</button>
-        </li>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#about')}>About</button>
-        </li>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#experience')}>Experience</button>
-        </li>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#services')}>Services</button>
-        </li>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#portfolio')}>Portfolio</button>
-        </li>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#testimonials')}>Testimonials</button>
-        </li>
-        <li>
-          <button onClick={(e) => handleScroll(e, '#contact')}>Contact</button>
-        </li>
+        {/* Make all internal links point to real section IDs */}
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div className="footer__socials">
@@ -52,10 +26,10 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy;  Eno_Africa. All rights reserved.</small>
+        <small>&copy; Eno_Africa. All rights reserved.</small>
       </div>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer;
