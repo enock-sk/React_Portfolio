@@ -19,6 +19,13 @@ const Experience = () => {
 </div>
     </article>
     <article className='experience__details'>
+      <FaCircleCheck className="experience__details-icons"/>
+<div>
+<h4>WordPress</h4>
+<small className='text-light'>Experience</small>
+</div>
+    </article>
+    <article className='experience__details'>
 <FaCircleCheck className="experience__details-icons"/>
 <div>
 <h4>REACT</h4>

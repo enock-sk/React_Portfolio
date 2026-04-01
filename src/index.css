@@ -11,8 +11,8 @@
     :root {
         --color-bg: #121212; /* Deep black for a sleek look */
         --color-bg-variant: #1E1E2E; /* Dark navy for contrast */
-        --color-primary: #FF6B6B; /* Vibrant coral red for accents */
-        --color-primary-variant: rgba(255, 107, 107, 0.4);
+        --color-primary: #0077ff; /* Vibrant coral red for accents */
+        --color-primary-variant: #4A90E2;
         --color-white: #F8F9FA; /* Soft white for better readability */
         --color-light: rgba(248, 249, 250, 0.6); /* Light gray for subtext */
         
