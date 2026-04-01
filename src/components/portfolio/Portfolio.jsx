@@ -3,8 +3,9 @@ import './portfolio.css'
 import IMG1 from '../../assets/daily.png'
 import IMG2 from '../../assets/movie.png'
 import IMG3 from '../../assets/portfolio_2.jpg'
-import IMG5 from '../../assets/portfolio_4.jpg'
-import IMG6 from '../../assets/portfolioo.png'
+import IMG5 from '../../assets/enobutchery.png'
+import IMG6 from '../../assets/web.png'
+import IMG7 from '../../assets/enosoftwares.png'
 
 const data = [
   {
@@ -38,16 +39,16 @@ const data = [
   {
     id: 5,
     image: IMG5,
-    title: 'Shoe Ecommerce Mobile APP in Flutter',
+    title: 'EnoSoftwares Frontend- Startup project',
     github: 'https://github.com/enock-sk',
-    demo: '#' // temporary placeholder
+    demo: 'https://enobutcheries.vercel.app/' // temporary placeholder
   },
   {
     id: 6,
-    image: IMG5,
-    title: 'Student Springboot REST API',
-    github: 'https://github.com',
-    demo: '#' // temporary placeholder
+    image: IMG7,
+    title: 'EnoButcheries',
+    github: 'https://enobutcheries.vercel.app/',
+    demo: 'https://enobutcheries.vercel.app/' // temporary placeholder
   }
 ]
 
