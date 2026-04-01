@@ -1,6 +1,6 @@
 import React from 'react'
 import './testimonials.css'
-import AVTA1 from '../../assets/key_1.jpg'
+import AVTA1 from '../../assets/user.jpg'
 import AVTA2 from '../../assets/user.jpg'
 import AVTA3 from '../../assets/p_2.jpg'
 import AVTA4 from '../../assets/p_3.jpg'

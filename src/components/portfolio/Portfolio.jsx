@@ -1,17 +1,17 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/portfolio.jpg'
-import IMG2 from '../../assets/portfolio_1.jpg'
+import IMG1 from '../../assets/daily.png'
+import IMG2 from '../../assets/movie.png'
 import IMG3 from '../../assets/portfolio_2.jpg'
 import IMG5 from '../../assets/portfolio_4.jpg'
-import IMG6 from '../../assets/portfolio_5.jpg'
+import IMG6 from '../../assets/portfolioo.png'
 const data=[
   {
     id:1,
     image:IMG1,
-    title: 'JobSpark TypeScript/React',
-    github: 'https://github.com/enock-sk',
-    demo: 'https://jobspark-lovat.vercel.app/'
+    title: 'Daily Wallpapers Android App',
+    github: 'https://github.com/enock-sk/DailyWallpapers',
+    demo: 'https://drive.google.com/file/d/191XUOmwYVVkDzvQa5ucYT0m30sM4CbXv/view?usp=sharing'
   },
   {
     id:2,
@@ -30,9 +30,9 @@ const data=[
   {
     id:4,
     image:IMG6,
-    title: 'My Portfolio Website',
+    title: 'Portfolio Website',
     github: 'https://github.com/enock-sk',
-    demo: 'enokoo.netlify.app'
+    demo: 'mrsang.vercel.app'
   },
   {
     id:5,
